@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Slider</title>
+</head>
+<body>
+
+<h1 id="sliderTittle">Simple Slider</h1>
+
+<img name = "slider" width="400" height="200">
+<button id="btn">Click Me</button>
+
+
+
+<script>
+
+var i = 0;
+var images = [];
+
+
+images[0] = "images/image1.jpg";
+images[1] = "images/image2.jpg";
+images[2] = "images/image3.jpg";
+images[3] = "images/image4.jpg";
+
+
+
+
+document.getElementById('btn').addEventListener("click", function(){
+
+	if (i < images.length - 1) {
+		i++;
+	}else{
+		i = 0;
+	}
+
+	document.getElementById('sliderTittle').innerHTML = "Enjoy the slide";
+	document.getElementById('btn').innerHTML = "Next";
+	document.slider.src = images[i];
+});
+
+
+
+
+</script>
+	
+</body>
+</html>
